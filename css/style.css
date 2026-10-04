@@ -1,0 +1,119 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* - css dasar - */
+:root {
+  --cream: #faf5e9;
+  --cream-dark: #f0e6cf;
+  --blue: #1f4e8c;
+  --blue-dark: #14365f;
+  --green: #3d8b69;
+  --green-light: #dcefe4;
+  --text: #22303c;
+  --white: #ffffff;
+  --gutter: 1rem;
+
+  --font-heading: "Unbounded", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  background-color: var(--cream);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  color: var(--blue-dark);
+}
+
+h2 { font-size: 1.6rem; margin-bottom: 0.75rem; }
+h3 { font-size: 1.1rem; }
+h4 { font-size: 1rem; }
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--green);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+}
+
+ul { list-style: none; }
+address { font-style: normal; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 0 0 6px 6px;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: 0;
+  color: var(--white);
+}
+
+.btn,
+.explore-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 999px;
+  transition: background 0.25s;
+}
+
+.btn:hover,
+.btn:focus-visible,
+.explore-button:hover,
+.explore-button:focus-visible {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.btn--small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.about-top-left,
+.about-top-right,
+.skills-top,
+.certifications-top,
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--green);
+}
